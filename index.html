@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Search App</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="page-wrapper">
+    <section class="hero-section">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Powered by OMDb API
+    </div>
+
+    <h1>Discover movies in seconds.</h1>
+
+    <p class="hero-description">
+      Search for movies, series, and episodes. Filter results by type or year,
+      view detailed information, and continue from your last search anytime.
+    </p>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <strong>Title</strong>
+        <span>Search</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>Year</strong>
+        <span>Filter</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>Poster</strong>
+        <span>Preview</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="movie-preview-card">
+      <div class="preview-poster"></div>
+
+      <div class="preview-content">
+        <span class="preview-label">Featured Result</span>
+        <h3>Movie Details</h3>
+
+        <div class="preview-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <button class="preview-button">View Details →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="search-panel">
+      <div class="input-group title-input">
+        <label for="movieInput">Movie title</label>
+        <input 
+          type="text" 
+          id="movieInput" 
+          placeholder="Example: Inception"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="typeFilter">Type</label>
+        <select id="typeFilter">
+          <option value="">Any</option>
+          <option value="movie">Movie</option>
+          <option value="series">Series</option>
+          <option value="episode">Episode</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="yearFilter">Year</label>
+        <input 
+          type="number" 
+          id="yearFilter" 
+          placeholder="2010"
+          min="1900"
+          max="2030"
+        />
+      </div>
+
+      <div class="button-group">
+        <button id="searchButton" class="primary-button">Search</button>
+        <button id="clearButton" class="secondary-button">Clear</button>
+      </div>
+    </section>
+
+    <section class="quick-search-section">
+      <p>Quick search:</p>
+
+      <div class="quick-buttons">
+        <button class="quick-button" data-title="Inception">Inception</button>
+        <button class="quick-button" data-title="Interstellar">Interstellar</button>
+        <button class="quick-button" data-title="The Dark Knight">The Dark Knight</button>
+        <button class="quick-button" data-title="Breaking Bad">Breaking Bad</button>
+      </div>
+    </section>
+
+    <section id="recentSearches" class="recent-searches"></section>
+
+    <div id="message"></div>
+
+<section id="searchResults" class="search-results"></section>
+
+<section id="movieResult" class="movie-result"></section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
